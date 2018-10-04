@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
   end 
   
   def destroy 
-    session[:name].clear
+    session.delete :name
+    redirect_to 'login'
   end 
   
 end 
